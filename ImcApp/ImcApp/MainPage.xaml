@@ -13,10 +13,14 @@
                    FontSize="Body"
                    HorizontalTextAlignment="Center" 
                    TextColor="White"/>
-            <Entry FontSize="Medium"/>
+            <Entry FontSize="Medium"
+                   x:Name="PesoEntry"/>
             <Label Text="Estarura de la persona en metros: "
-                   FontSize="Body"/>
-            <Entry FontSize="Medium"/>
+                   FontSize="Body"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"/>
+            <Entry FontSize="Medium"
+                   x:Name="EstaturaEntry"/>
             </StackLayout>
         </Frame>
         <StackLayout Orientation="Horizontal"
@@ -24,10 +28,16 @@
                      HorizontalOptions="CenterAndExpand">
             <Button Text="Calcular"
                     FontSize="Body"
-                    WidthRequest="130"/>
+                    WidthRequest="130"
+                    Margin="8"
+                    x:Name="CalcularButton"
+                    Clicked="CalcularButton_Clicked"/>
             <Button Text="Limpiar"
                     FontSize="Body"
-                    WidthRequest="130"/>
+                    WidthRequest="130"
+                    Margin="8"
+                    x:Name="LimpiarButton"
+                    Clicked="LimpiarButton_Clicked"/>
         </StackLayout>
         <Frame>
             <StackLayout>
@@ -35,27 +45,18 @@
                        FontSize="Body"/>
                 <Label Text="23.4567"
                        HorizontalOptions="Center"
-                       FontSize="28"/>
+                       FontSize="28"
+                       x:Name="ImcLabel"/>
                 <Label Text="La situaccion nutricional de la persona es: "
                        FontSize="Body"/>
                 <Label Text="Peso normal"
                        HorizontalOptions="Center"
-                       FontSize="28"/>
+                       FontSize="28"
+                       x:Name="SituacionNutricionalLabel"/>
             </StackLayout>
         </Frame>
-        <Label Text="Start developing now" 
-               FontSize="Title" 
-               Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
+        <Label>
+            
         </Label>
     </StackLayout>
 
